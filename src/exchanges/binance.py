@@ -8,7 +8,7 @@ BIDS_URL = "https://api.binance.com/api/v1/depth?symbol={}&limit={}"
 
 
 def get_products(filter_str=""):
-    """Returns a list of tuples of avaliable products on cex.io exchange"""
+    """Returns a list of tuples of avaliable products on binance exchange"""
     json_get = json.loads(requests.get(PRODUCT_URL).text)
     products = []
     for product in json_get:
